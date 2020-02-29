@@ -1,4 +1,4 @@
-For this assignment we were required to create a random PW generator using JS.  The reuirements were:
+For this assignment we were required to create a random PW generator using JS.  The requirements were:
 
     *8-128 character length
     * be able to generate only lowercase
