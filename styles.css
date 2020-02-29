@@ -22,8 +22,9 @@ label {
     color: white;
     padding: 1rem;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
     border: 1px solid black;
-    height: 2rem;
+    height: 5rem;
     width: 350px;
     display: flex;
     justify-content: center;
@@ -37,7 +38,7 @@ label {
 }
 
 .number-input{
-    width: 2rem;
+    width: 3rem;
 }
 
 .container {

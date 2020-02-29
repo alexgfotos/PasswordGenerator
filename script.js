@@ -8,6 +8,8 @@ var form = document.getElementById('passwordGenerator')
 
 var includeUppercaseElement = document.getElementById('includeUppercase')
 
+var includeLowercaseElement = document.getElementById('includeLowercase')
+
 var includeNumbersElement = document.getElementById('includeNumbers')
 
 var includeSpecialElement = document.getElementById('includeSpecial')
@@ -46,21 +48,23 @@ var SpecialCharCodes = arrayFromLowToHigh(33, 47)
 
 // function to prevent button from reseting page to default and to display password
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
+form.addEventListener('submit', event => {
+    event.preventDefault()
     var characterAmount = pwLengthNumber.value
+    var includeLowercase = includeLowercaseElement.checked
     var includeUppercase = includeUppercaseElement.checked
     var includeNumbers = includeNumbersElement.checked
     var includeSpecial = includeSpecialElement.checked
     
-    var password = generatePassword(characterAmount, includeUppercase, includeNumbers, includeSpecial)
+    var password = generatePassword(characterAmount, includeLowercase, includeUppercase, includeNumbers, includeSpecial)
     pwDisplay.innerText = password
 })
 
 // function to generate the password
 
-function generatePassword(characterAmount, includeUppercase, includeNumbers, includeSpecial) {
-    var charCodes = LowerCharCodes
+function generatePassword(characterAmount, includeLowercase, includeUppercase, includeNumbers, includeSpecial) {
+    var charCodes = [0]
+    if (includeLowercase) charCodes = charCodes.concat(LowerCharCodes)
     if (includeUppercase) charCodes = charCodes.concat(UpperCharCodes)
     if (includeNumbers) charCodes = charCodes.concat(NumberCharCodes)
     if (includeSpecial) charCodes = charCodes.concat(SpecialCharCodes)
@@ -72,7 +76,7 @@ function generatePassword(characterAmount, includeUppercase, includeNumbers, inc
 // for loop based on the chosen characterAmount by user
     for (var i = 0; i <= characterAmount; i++){ 
 
-// this variable is the result of a random number generated * the length of the ASCII code array and the pushed into the passwordCharacter array as a sting?
+// this variable is the result of a random number generated between .0 and 1 * the length of the ASCII code array and the pushed into the passwordCharacter array as a sting?
         var characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
         passwordCharacters.push(String.fromCharCode(characterCode))
     }

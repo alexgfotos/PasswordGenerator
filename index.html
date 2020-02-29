@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A PASSWORD IS BORN</title>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,6 +17,8 @@
                     <input type="range" min="8" max="128" value="16" id= "pwLengthNumber">
                     <input class= "number-input" type="number" min="8" max="128" value="16" id= "pwLengthRange">
             </div>
+            <label for="includeLowercase">Include Lowercase?</label>
+            <input type="checkbox" id="includeLowercase">
 
             <label for="includeUppercase">Include Uppercase?</label>
             <input type="checkbox" id="includeUppercase">
