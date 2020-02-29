@@ -12,7 +12,7 @@ I followed this youtube video: https://www.youtube.com/watch?v=iKo9pDKKHnc and m
 
     - Bootstrap disagreed with some of the elements, I spent sometime trying to clean it up.  I needed Bootstrap for media query/responsiveness
 
-    - PW display box does to constrain the text (longer pw would spill out).  I made the box bigger and the text smaller, what is the more elegant solution?
+    - PW display box does not constrain the text (longer pw would spill out).  I made the box bigger and the text smaller, what is the more elegant solution?
 
     - upload to github broke CSS, I had to add a CSS reset file
  
