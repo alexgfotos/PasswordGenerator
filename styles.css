@@ -14,18 +14,20 @@ label {
 }
 .title {
     margin:0;
+    padding: 1rem;
     text-align: center;
 }
 
 .pw-display {
     background-color: rgba(218, 213, 193, .8);
+    margin-bottom: 1rem;
     color: white;
-    padding: 1rem;
+    padding: 2rem;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     border: 1px solid black;
     height: 5rem;
-    width: 350px;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +43,7 @@ label {
     width: 3rem;
 }
 
-.container {
+#container {
     background-color: rgba(197, 211, 162, .6);
     padding: 3rem;
     border-radius: 1rem;
